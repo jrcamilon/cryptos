@@ -1,8 +1,8 @@
 let mySql = require('mysql');
 let _ = require('lodash');
 var config = {
-    user: "sa",
-    password: "ft3t7pgz",
+    user: "",
+    password: "",
     host: "vm1.infosol.com",
     port: "3306",
     database: 'crypto'
