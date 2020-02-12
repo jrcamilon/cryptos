@@ -1,17 +1,18 @@
 let mySql = require('mysql');
 let _ = require('lodash');
+let env = require('../config.js');
 var config = {
-    user: "sa",
-    password: "ft3t7pgz",
-    host: "vm1.infosol.com",
-    port: "3306",
-    database: 'crypto'
+    user: env.user,
+    password: env.password,
+    host: env.host,
+    port: env.port,
+    database: env.database
 }
 
 const pool = new mySql.createConnection(config)
 pool.connect(err => {
     if (err) console.log(err);
-    else console.log('connected to MySQL database:', config.database + 'on host: ' + config.host);
+    else console.log('connected to MySQL database: ', config.database + 'on host: ' + config.host);
 });
 /**
  * Get Request for all the currencies

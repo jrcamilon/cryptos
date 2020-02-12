@@ -26,7 +26,7 @@ app.use(express.static(publicDirectoryPath));
 router(app);
 
 //Server Setup
-var port = process.env.PORT || 3093;
+var port = process.env.PORT || 3095;
 let server = http.createServer(app);
 server.listen(port);
 
